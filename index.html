@@ -9,6 +9,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Hangman Game</title>
 
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -16,12 +19,71 @@
 
 <body>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="./assets/images/hangman-olympic.png" alt="Hangman" class="img-responsive center-block">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="game-container">
+                    <div class="row">
+                        <div class="col-md-3 b-r">
+                            <div class="stat-card">
+                                <div class="stat-card-heading">Wins</div>
+                                <div class="stat-card-body">
+                                    <span id="user-wins"></span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-card-heading">Losses</div>
+                                <div class="stat-card-body">
+                                    <span id="user-losses"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="stat-card">
+                                <div class="stat-card-heading">Guesses Remaining</div>
+                                <div class="stat-card-body">
+                                    <span id="guesses-remaining"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="game-content">
+                                <div class="hangman-game-area">
+                                    <div class="hangman-game-heading">Current Word</div>
+                                    <div class="hangman-game-body">
+                                        <span id="hangman-word"></span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="letter-history">
+                                    <div class="letter-history-heading">Letters Already Guessed</div>
+                                    <div class="letter-history-body">
+                                        <span id="letters-guessed"></span>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="hangman-about">
+                                    <p class="text-muted"><strong>Objective: </strong>Guess the randomly selected Olympic sport by using the keys on your keyboard. Only alphbetic characters are allowed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <!-- Game.js -->
+    <script src="./assets/js/game.js"></script>
 </body>
 
 </html>
